@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <style>
+        #panel,
+        #panelPadajuci {
+            padding: 5px;
+            height: 200px;
+            display: none;
+            background: grey;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="padajuci">klikni ovde za vise detalja</div>
+    <div id="panel">Smart skola</div>
+    <script>
+        $(document).ready(function() {
+            $('#padajuci').click(function() {
+                // $('#panel').slideToggle('fast');
+                $('#panel').slideDown();
+                $('#panel').slideUp();
+            });
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript - OOP</title>
+	
+
+</head>
+<body>
+
+	<h1>Čas1Primer01 - Objekti</h1>
+
+	<p id="p1"></p>
+
+	<h2>Osoba</h2>
+
+	<p id="p2"></p>
+
+	<script>
+		var osoba = {
+			ime: "Marko",
+			prezime: "Markovic",
+			godiste: 1991,
+			adresa: "Novi Sad"
+		};
+
+		console.log(osoba);
+		console.log(osoba.ime);
+		console.log(osoba["prezime"]);
+
+		var p1 = document.getElementById("p1");
+		p1.innerHTML = osoba.ime;
+
+		/*
+		var p2 = document.getElementById("p2");
+		
+		p2.innerHTML += "Ime: " + osoba.ime + "<br>";
+		p2.innerHTML += "Prezime: " + osoba.prezime + "<br>";
+		p2.innerHTML += "Godiste: " + osoba.godiste + "<br>";
+		p2.innerHTML += "Adresa: " + osoba.adresa + "<br>";
+		*/
+	</script>
+</body>
+</html>

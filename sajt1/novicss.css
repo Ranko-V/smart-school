@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+nav {
+    top: 0;
+    position: sticky;
+    width: 100%;
+    background: black;
+    display: table;
+}
+
+nav ul {
+    display: table-row;
+    width: 100%;
+}
+
+nav ul li {
+    display: table-cell;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font: 2em Tahoma;
+    color: #ffffff;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    background: gray;
+    text-decoration: none;
+}
+
+nav ul li:hover {
+    background: gray;
+}
+
+.up {
+    left: 100%;
+    bottom: 0;
+    position: sticky;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.levo {
+    float: left;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Lora', serif;
+
+}
+
+@keyframes bimg {
+    0% {
+        left: 0%;
+    }
+
+    12.5% {
+        left: 0%;
+    }
+
+    25% {
+        left: -100%;
+    }
+
+    37.5% {
+        left: -100%;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    62.5% {
+        left: -200%;
+    }
+
+    75% {
+        left: -300%;
+    }
+
+    87.5% {
+        left: -300%;
+    }
+
+    100% {
+        left: -400%;
+    }
+
+
+
+}
+
+.slider-a {
+    overflow: hidden;
+}
+
+.slider-b {
+    width: 500%;
+    position: relative;
+
+    animation: 10s bimg infinite;
+}
+
+.slider-b img {
+    float: left;
+    width: 20%;
+}
+
+.slzoom {
+    width: 60%;
+    overflow: hidden;
+    border: 3px solid green;
+    margin: 20px;
+
+}
+
+.levo:hover {
+    transform: scale(1.4);
+    padding: 0;
+    margin: 0;
+    transition: all 3s ease 0s;
+
+}
+
+article img {
+    border-radius: 50%;
+}
+
+article {
+    text-align: center;
+}
+
+.header h1 {
+    color: red;
+    background: black;
+
+}

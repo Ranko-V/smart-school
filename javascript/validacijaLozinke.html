@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScripta - Password validation</title>
+    <style>
+        body {
+            background: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <p>1.1. Polje u kome se upisuje lozinka ne sme biti prazno</p>
+        <p>1.2. U isto polje mora da se unese minimum 8 karaktera</p>
+        <p>1.3. Polje u kome se ponovo upisuje lozinka ne sme biti prazno</p>
+        <p>1.4. Lozinka i potvrdna lozinka moraju biti iste</p>
+        <p>1.5. Poslati poruku korisniku da je validacija lozinki uspesna</p>
+        <p>1.6. Dodatni zadatak - Lozinka mora da sadrži barem jedan broj (Koristiti regex)</p>
+        <p>1.7. Dodatni zadatak - Kada se korisniku prikaze poruka da je validacija uspesna, resetovati formu</p>
+
+        <form name="frm">
+            <div>
+                <label>Unesite lozinku: </label>
+                <input type="password" name="Password" placeholder="Enter password" />
+            </div>
+            <div>
+                <label>Potvrdite lozinku: </label>
+                <input type="password" name="ConfirmPassword" placeholder="Re-enter password" />
+            </div>
+            <div class="btn_holder">
+                <input type="button" value="Submit" class="btn" onclick="validate()" />
+                <input type="reset" value="Reset" class="btn" />
+            </div>
+        </form>
+    </div>
+
+
+
+    <script>
+        function validate() {
+            if (document.frm.Password.value === "") {
+                alert('molimo unesite Password');
+                document.frm.Password.focus();
+                return false;
+            }
+            if (document.frm.Password.value.length < 8) {
+                alert("vise znakova");
+                document.frm.Password.focus();
+                return false;
+            }
+
+            if (/[0-9]/.test(document.frm.Password.value) === false) {
+                alert('lozinka mora da sadrzi broj');
+                document.frm.Password.focus();
+                return false;
+            }
+
+            if (document.frm.ConfirmPassword.value === "") {
+                alert('molimo ponovite Password');
+                document.frm.ConfirmPassword.focus();
+                return false;
+            }
+
+            if (document.frm.ConfirmPassword.value !== document.frm.Password.value) {
+                alert('razlikuju se vrednosti');
+                document.frm.ConfirmPassword.focus();
+                return false;
+            }
+
+            alert("Forma uspesno poslata.");
+            document.frm.reset();
+
+            return true;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+nav {
+    background: $siva;
+    color: white;
+    border-bottom: 2px solid white;
+
+    h1 {
+        float: left;
+        padding: 14px;
+    }
+
+    ul {
+        list-style-type: none;
+        overflow: hidden;
+
+        li {
+            float: right;
+
+            a {
+                display: block;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                color: white;
+
+                &:hover {
+                    background-color: gray;
+
+                }
+            }
+        }
+    }
+}
+
+.slika {
+    clear: both;
+    background-image: url("okinawa-scenery-wallpaper.jpg");
+    background-size: cover;
+    min-height: 300px;
+    vertical-align: middle;
+    color: white;
+
+    h2 {
+        vertical-align: middle;
+        margin: 0 auto;
+    }
+}

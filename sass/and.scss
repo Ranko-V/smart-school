@@ -1,0 +1,32 @@
+a {
+    font-size: 20px;
+
+    &:link {
+        color: blue;
+
+    }
+
+    &:hover {
+        text-decoration: underline;
+        background-color: yellow;
+        color: red;
+
+    }
+
+    &:active {
+        color: green;
+    }
+
+    &:visited {
+        color: purple;
+    }
+}
+
+.box {
+    p {
+        &:first-child {
+            background: blue;
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@mixin largetext {
+    font: {
+        family: Verdana;
+        size: 20px;
+        weight: bold;
+    }
+
+    color: red;
+    background: yellow;
+}
+
+h1.pagetitle {
+    @include largetext;
+    padding: 15px;
+    margin: 20px;
+}
+
+h3 {
+    @include largetext;
+    margin: 100px;
+    border: 2px solid red;
+}

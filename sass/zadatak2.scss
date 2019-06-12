@@ -1,0 +1,74 @@
+$baseFont: 15px;
+$navBoja: #f9ed69;
+$navTekst: #333;
+
+//
+//.oba {
+//    font-size: $baseFont;
+//    font-family: Lucida Sans Unicode;
+//    font-weight: 400;
+//    border-radius: 4px;
+//    padding: 5px 10px;
+//    text-decoration: none;
+//
+//    &.yahoo {
+//        background: #ff7900;
+//        color: white;
+//
+//        &:hover {
+//            background: #cd772a;
+//        }
+//    }
+//
+//    &.google {
+//        background: #4285f4;
+//        color: white;
+//
+//        &:hover {
+//            background: #1458c9;
+//        }
+//    }
+//}
+
+nav {
+    background: $navBoja;
+    color: $navTekst;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+
+    }
+
+    li {
+        display: inline;
+        float: left;
+
+        &:last-child {
+            float: right;
+            color: #b83b5e;
+        }
+
+
+    }
+
+    a {
+        text-decoration: none;
+        display: block;
+        padding: 10px 16px;
+
+        &:hover {
+            color: #b83b5e;
+        }
+
+    }
+}
+
+.desni {
+    color: #b83b5e;
+
+}

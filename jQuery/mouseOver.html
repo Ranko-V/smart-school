@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JQuery mouseover dogadjaj primer</title>
+    <style type="text/css">
+        .mojaKlasa {
+            background-color: yellow;
+            color: White;
+            width: 200px;
+        }
+
+        .mojaKlasa1 {
+            background-color: Red;
+            color: White;
+            width: 300px;
+        }
+
+    </style>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+    <h1>JQuery mouseover dogadjaj primer</h1>
+
+    <div id="OutputDiv">Ovo je div</div>
+    <div id="IspisDiv">Ovde treba da se ispise tekst</div>
+
+    <script>
+        $(document).ready(function() {
+            $('#OutputDiv').mouseover(function() {
+                $(this).toggleClass('mojaKlasa');
+            });
+            $('#OutputDiv').mouseleave(function() {
+                $(this).toggleClass('mojaKlasa');
+            });
+        });
+
+    </script>
+</body>
+
+</html>

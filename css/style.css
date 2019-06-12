@@ -1,0 +1,50 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    font-family: cursive;
+    text-align: center;
+    font-size: 2em;
+    background-color: bisque;
+
+}
+
+h2 {
+    color: red;
+    background-color: azure;
+    font-style: italic;
+
+}
+
+body {
+    background-image: url("https://edx.smart.rs/assets/courseware/v1/4802db4090ef42c2338c28e73d819929/asset-v1:SmartSchool+CS02+2019+type@asset+block/background-10.jpg");
+}
+
+p {
+    font-size: 16px;
+    font-family: Arial;
+}
+
+#contact {
+    color: red;
+    font: 14px italic, sans-serif;
+}
+
+#img1 {
+    text-align: center;
+}
+
+.details {
+    background-color: darkgoldenrod;
+    margin: 0 20px;
+
+}
+
+a {
+    text-decoration: none;
+    padding: 3px;
+    border: 2px solid blue;
+    float: right;
+}

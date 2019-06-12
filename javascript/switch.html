@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="dan"></p>
+    <script>
+        var danas = new Date();
+        var dan = danas.getDay();
+        var rez = "";
+
+        switch (dan) {
+            case 0:
+                rez = "nedelja";
+                break;
+            case 1:
+                rez = "ponedeljak";
+                break;
+            case 2:
+                rez = "utorak";
+                break;
+            case 3:
+                rez = "sreda";
+                break;
+            case 4:
+                rez = "cetvrtak";
+                break;
+            case 5:
+                rez = "petak";
+                break;
+            case 6:
+                rez = "subota";
+                break;
+        }
+        console.log(rez);
+        document.getElementById("dan").innerHTML = "Danas je: " + rez;
+
+
+        //switch sa defaultnom vrednoscu
+        function vrednost() {
+            var arg = prompt("unesi vrednost.");
+            switch (arg) {
+                case "0":
+                case "1":
+                    alert("upisana je 0 ili 1.");
+                    break;
+                case "2":
+                    alert("upisana je 2.");
+                    break;
+                case 3:
+                    alert("upisana je 3."); //nece je prepoznati zato sto je ne vidi kao string
+                    break;
+                default:
+                    alert("nepoznata vrednost.");
+            }
+        }
+        vrednost();
+
+    </script>
+</body>
+
+</html>

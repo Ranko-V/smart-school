@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="hoteli"></div>
+    <script>
+        //nizovi objekata
+        var hoteli = [{
+                naziv: "Park",
+                adresa: "Nsajma 35",
+                brojSoba: 140,
+                rezervisano: 57,
+                bazen: true,
+                brojSlobodnihSoba: function() {
+                    return this.brojSoba - this.rezervisano;
+                },
+            },
+            {
+                naziv: "centar",
+                adresa: "uspenska 1",
+                brojSoba: 90,
+                rezervisano: 68,
+                bazen: false,
+                brojSlobodnihSoba: function() {
+                    return this.brojSoba - this.rezervisano;
+                }
+            }
+        ];
+
+        var txt = "";
+        for (var i = 0; i < hoteli.length; i++) {
+            var hotel = hoteli[i];
+            txt += "<p>Podaci o hotelu</p>";
+            txt += "<p>Naziv: " + hotel.naziv + "</p>";
+            txt += "<p>adresa: " + hotel.adresa + "</p>";
+            txt += "<p>Kapacitet: " + hotel.brojSoba + "</p>";
+            txt += "<p>Bazen: ";
+            if (hotel.bazen === true) {
+                txt += "ima</p>";
+            } else {
+                txt += "nema</p>";
+            }
+            txt += "<p>Broj slobodnih soba: " + hotel.brojSlobodnihSoba() + "</p>";
+        }
+        document.getElementById("hoteli").innerHTML = txt;
+
+    </script>
+</body>
+
+</html>

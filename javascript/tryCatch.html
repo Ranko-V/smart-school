@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+    </title>
+</head>
+
+<body>
+    <input type="button" onclick="primer1()">Primer 1
+    <input type="button" onclick="primer2()">Primer 2
+    <input type="button">Primer 3
+    <script>
+        //funkcija bez greske
+        function primer1() {
+            try {
+                alert("usao u try blok");
+                var sum = 2 + 2;
+                alert("zbir je: " + sum);
+                alert("kraj try bloka");
+            } catch (err) {
+                alert("Catch je ignorisan, zato sto nije bilo gresaka.");
+            }
+        }
+        //funkcija sa greskom
+        function primer2() {
+            try {
+                df;
+                alert("usao u try blok");
+                var sum = 2 + 2;
+                alert("zbir je: " + sum);
+                alert("kraj try bloka");
+            } catch (err) {
+                alert("Desila se greska.");
+                alert(err.name);
+                alert(err.message);
+            }
+        }
+        //funkcija sa greskom i finally
+        function primer3() {
+            try {
+                df;
+                alert("usao u try blok");
+                var sum = 2 + 2;
+                alert("zbir je: " + sum);
+                alert("kraj try bloka");
+            } catch (err) {
+                alert("Desila se greska.");
+                alert(err.name);
+                alert(err.message);
+            } finally {
+                alert("finally se izvrsio.")
+            }
+        }
+        //finally se uvek izvrsava bez obzira na gresku
+
+    </script>
+</body>
+
+</html>

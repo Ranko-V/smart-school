@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="auto" id="auto" onchange="ubaci(), sakrij()">
+        <option value="Audi">Audi</option>
+        <option value="BMW">BMW</option>
+        <option value="VW">VW</option>
+        <option value="Mercedes">Mercedes</option>
+    </select>
+    <input type="text" id="input">
+    <input type="button" value="Prikazi" onclick="promeni()">
+    <h2 id="sakriven" style="display: none"></h2>
+
+
+
+    <script>
+        function ubaci() {
+            var izabrano = document.getElementById('auto').value;
+            document.getElementById('input').value = izabrano;
+        }
+
+        function promeni() {
+            var inp = document.getElementById('input').value;
+            document.getElementById('sakriven').innerHTML = inp;
+            document.getElementById('sakriven').style.display = "block";
+        }
+
+        function sakrij() {
+
+            document.getElementById('sakriven').style.display = "none";
+        }
+
+    </script>
+</body>
+
+</html>

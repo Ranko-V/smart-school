@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var brojevi = [8, 6, 3, 2, 9, 5, 10];
+        var suma = 0;
+        for (var i = 0; i < brojevi.length; i++) {
+            suma += brojevi[i];
+        }
+        console.log(suma / brojevi.length);
+
+        for (var i = 0; i < brojevi.length; i++) {
+            if (brojevi[i] === 5) {
+                console.log("Niz sadrzi broj 5 koji se nalazi na " + (i + 1) + ". mestu.");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

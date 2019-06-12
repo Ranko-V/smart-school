@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <style>
+        .ancestors * {
+            display: block;
+            border: 2px solid lightgray;
+            color: #999;
+            padding: 5px;
+            margin: 15px;
+        }
+
+        .pasus {
+            background-color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="ancestors">
+        <p>pasus 1</p>
+        <p>pasus 2</p>
+        <p class="pasus">pasus 3</p>
+
+        <ul>bhjh
+            <li>google</li>
+            <li>bing</li>
+            <li>yahoo</li>
+        </ul>
+
+        <button id="dugme1">parent</button>
+        <button id="dugme2">children</button>
+        <button id="dugme3">find</button>
+        <button id="dugme4">siblings</button>
+        <button id="dugme5">next</button>
+        <button id="dugme6">prev</button>
+        <button id="dugme7">first</button>
+        <button id="dugme8">last</button>
+        <button id="dugme9">not</button>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            //selektovanje roditelja
+            $('#dugme1').click(function() {
+                //                $('li').parent().css({
+                //                    'color': 'red',
+                //                    'border': '2px solid red'
+                //                });
+                //                $('li').parents().css({
+                // 'color': 'red',
+                // 'border': '2px solid red'
+                // });
+                $('li').parents('div').css('border', '3px solid green');
+            });
+
+            //selektovanje dece
+            $('#dugme2').click(function() {
+                // $('ul').children().css('border', '4px solid blue');
+                //$('li:first-child').css('border', '4px solid blue');
+                $('li:last-child').css('border', '4px solid blue');
+            });
+
+            //find metoda
+            $('#dugme3').click(function() {
+                $('div').find('.pasus').css('border', '1px solid red');
+            });
+
+            //siblings
+            $('#dugme4').click(function() {
+                $('ul').siblings().css('border', '3px solid orange');
+            });
+
+            //next
+            $('#dugme5').click(function() {
+                $('ul').next().css('border', '1px solid purple');
+            });
+
+            //prev
+            $('#dugme6').click(function() {
+                $('ul').prev().css('border', '2px solid yellow');
+            });
+
+            //first
+            $('#dugme7').click(function() {
+                $('p').first().css('border', '2px solid brown');
+            });
+
+            //last
+            $('#dugme8').click(function() {
+                $('p').last().css('border', '2px solid violet');
+            });
+
+            //not
+            $('#dugme9').click(function() {
+                $('p').not('.pasus').css('border', '2px solid pink');
+            });
+        });
+
+    </script>
+</body>
+
+</html>

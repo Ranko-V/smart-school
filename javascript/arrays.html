@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="auto"></p>
+    <br>
+    <h1>Prikaz niza</h1>
+    <div id="nizAutomobila"></div>
+    <script>
+        //definisanje niza
+        var automobili = ["Audi", "BMW", "Opel", "Volvo", "Mercedes", "Porsche"];
+        //pristupanje elementu niza
+        document.getElementById("auto").innerHTML = automobili[0];
+
+        //duzina niza
+        console.log(automobili.length);
+
+        //pristupanje poslednjem clanu niza
+        document.getElementById("auto").innerHTML = automobili[automobili.length - 1];
+
+        //prolazak kroz petlju
+        for (var i = 0; i < automobili.length; i++) {
+            console.log(automobili[i]);
+        }
+
+        //primer nizAutomobila
+        var kola = ["Toyota", "Tesla", "Lada", "Honda"];
+        var txt = "<ul>";
+        for (var i = 0; i < kola.length; i++) {
+            txt += "<li>" + kola[i] + "</li>";
+        }
+        txt += "</ul";
+        document.getElementById("nizAutomobila").innerHTML = txt;
+
+    </script>
+</body>
+
+</html>

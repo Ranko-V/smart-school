@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div id="OutputDiv">
+        prvi dsfsd fndf df
+    </div>
+    <div id="TestDiv">
+        drugi dsfsrben fjdf
+    </div>
+    <script>
+        $(document).ready(function() {
+            //apend metoda
+            $('#OutputDiv').append('<span style="background:green">Dodaje tag nakon...</span>');
+
+            //prepend
+            $('#OutputDiv').prepend('<span style="background:yellow">Dodaje tag pre...</span>');
+
+            //remove
+            //$('#OutputDiv').remove();
+
+            //wrap
+            $('#OutputDiv').wrap('<div class="MojaKlasa">DNfhidsfhd</div>');
+            $('.MojaKlasa').css('background', 'grey');
+
+            //after
+            $('#OutputDiv').after('<span style="background: red">Dodfjdf posle divsa</span>');
+
+            //before
+            $('#OutputDiv').before('<span style="background: blue">Dodaje ispred...</span>');
+
+            $('#TestDiv').append('<div>Dodajem div posle</div>');
+
+            $('#TestDiv').prepend('<div>Dodajem div pre</div>');
+
+            $('#TestDiv').wrap("<span class='Klasa1'>omotavanje diva spanom</span>");
+        });
+
+    </script>
+</body>
+
+</html>

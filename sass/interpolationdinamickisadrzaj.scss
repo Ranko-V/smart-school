@@ -1,0 +1,29 @@
+p::before {
+    content: "4444444";
+}
+
+p::after {
+    content: " odradjeno";
+    color: gainsboro;
+}
+
+$rootPath: "https://www.google.com";
+$baseColName: "col";
+$grad: "Novi Sad";
+$skola: "smart";
+
+.container {
+    background-image: url("#{$rootPath}/img/background.png")
+}
+
+.#{$baseColName}-#{3} {
+    width: 33%;
+}
+
+.#{$baseColName}-6 {
+    width: 33%;
+}
+
+p::after {
+    content: "zivim u #{$grad}, i idem u #{$skola}";
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="niz"></p>
+    <input type="button" value="prikazi" onclick="dodeli()">
+    <script>
+        var serije = ["GoT", "Simpsons", "Scrubs", "Dr House", "South Park", "Breaking Bad"];
+
+        var omiljenaSerija = serije[Math.floor(Math.random() * 6)];
+        //console.log(omiljenaSerija);
+
+        function dodeli() {
+            document.getElementById("niz").innerHTML = serije[Math.floor(Math.random() * serije.length)];
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .prikazDatuma {
+            padding: 25px;
+            background: coral;
+            color: white;
+            font-size: 25px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <button onclick="dodajKlasu()">probaj</button>
+    <button onclick="ukloniKlasu()">probaj</button>
+    <button onclick="dodajIUkloni()">menjaj</button>
+    <div id="datum">
+        Danas je 24/4/2019
+    </div>
+    <script>
+        function dodajKlasu() {
+            var element = document.getElementById('datum');
+            element.classList.add("prikazDatuma");
+        }
+
+        function ukloniKlasu() {
+            var element = document.getElementById('datum');
+            element.classList.remove("prikazDatuma");
+        }
+
+        function dodajIUkloni() {
+            var element = document.getElementById("datum");
+            element.classList.toggle("prikazDatuma");
+        }
+
+    </script>
+</body>
+
+</html>

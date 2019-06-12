@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>datepicker</title>
+    <link rel="stylesheet" href="jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+    <p>Datum: <input type="text" id="datepicker"></p>
+    <button id="pokupi">pokupi</button>
+    <div id="divIspis"></div>
+    <br>
+    <br>
+    <br>
+
+    <input type="text" id="inputSlider">
+    <br>
+    <br>
+
+    <button id="pomnozi">pokupi vrednost inputa</button>
+    <br>
+    <br>
+
+    <div id="slider">
+        <div id="custom-handle" class="ui-slider-handle"></div>
+    </div>
+    <br>
+    <br>
+
+    <div id="outputSlider"></div>
+    <script>
+        //datepicker komponenta
+        $(document).ready(function() {
+            $('#datepicker').datepicker({
+                'dateFormat': 'dd/mm/yy',
+                'minDate': new Date()
+            });
+            $('#pokupi').click(function() {
+                $('#divIspis').html($('#datepicker').val())
+            });
+
+            //slider komponenta
+            var handle = $('#custom-handle');
+
+
+            $('#slider').slider({
+                create: function() {
+                    handle.text($(this).slider('value'));
+                },
+                slide: function(event, ui) {
+                    handle.text(ui.value);
+                    var brojZaMnozenje = $('#inputSlider').val();
+                    $('#outputSlider').html(ui.value * brojZaMnozenje);
+
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+.content {
+    margin: auto;
+
+    p {
+        padding: 10px 30px;
+    }
+
+    .apple {
+        width: 30%;
+        display: inline-block;
+        text-align: center;
+
+        img {
+            width: 60%;
+        }
+    }
+}

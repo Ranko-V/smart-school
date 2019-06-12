@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var automobili = [
+            ["Mercedes", "b"],
+            ["Opel", "d"],
+            ["Toyota", "d"],
+            ["BMW", "b"],
+            ["Volvo", "d"],
+        ];
+
+        //        function razvrstaj() {
+        //            var benzinci = [];
+        //            var dizelasi = [];
+        //            for (var i = 0; i < automobili.length; i++) {
+        //                if (automobili[i][1] === "b") {
+        //                    benzinci.push(automobili[i][0]);
+        //                } else {
+        //                    dizelasi.push(automobili[i][0]);
+        //
+        //                }
+        //            }
+        //            console.log(benzinci);
+        //            console.log(dizelasi);
+        //
+        //        }
+        //        razvrstaj();
+
+        const benzinci = automobili.filter(auto => auto[1] === "b");
+        document.write(benzinci);
+
+    </script>
+</body>
+
+</html>

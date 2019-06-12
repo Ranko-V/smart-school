@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    jmbg:
+    <input type="number" id="jmbg" maxlength="13">
+    <p><button onclick="ispisiPol()">Pol</button></p>
+    <p><button onclick="ispisiRodjenje()">Datum rodjenja</button></p>
+
+    <p id="ispis"></p>
+    <p id="ispis2"></p>
+    <script>
+        function ispisiRodjenje() {
+            var datum = document.getElementById("jmbg").value.toString();
+            document.getElementById("ispis").innerHTML += datum[0] + datum[1] + "." + datum[2] + datum[3] + ".1" + datum[4] + datum[5] + datum[6] + ".";
+        }
+
+        function ispisiPol() {
+            var datum = document.getElementById("jmbg").value.toString();
+            var pol = parseFloat(datum[9]);
+            if (pol < 5) {
+                document.getElementById("ispis2").innerHTML = "Musko";
+            } else {
+                document.getElementById("ispis2").innerHTML = "Zensko";
+
+            }
+        }
+        var inputJmbg = document.getElementById("jmbg");
+        var jmbg = inputJmbg.value;
+
+    </script>
+</body>
+
+</html>

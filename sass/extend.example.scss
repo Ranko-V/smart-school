@@ -1,0 +1,24 @@
+.err {
+    border: 1px solid red;
+    background: grey;
+}
+
+.att {
+    @extend .err;
+    color: blue;
+}
+
+.bbase {
+    padding: 20px;
+    margin: 20px;
+    color: yellow;
+}
+
+.ebase {
+    background: red;
+}
+
+.ebutton {
+    @extend .bbase;
+    @extend .ebase;
+}

@@ -1,0 +1,18 @@
+p::before {
+  content: "4444444"; }
+
+p::after {
+  content: " odradjeno";
+  color: gainsboro; }
+
+.container {
+  background-image: url("https://www.google.com/img/background.png"); }
+
+.col-3 {
+  width: 33%; }
+
+.col-6 {
+  width: 33%; }
+
+p::after {
+  content: "zivim u Novi Sad, i idem u smart"; }

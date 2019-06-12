@@ -1,0 +1,39 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $pozadina;
+    text-align: center;
+    border: $koralniBorder;
+    height: 150px;
+
+    i {
+        color: saddlebrown;
+    }
+
+    .headPart {
+        width: 50%;
+        padding: 10px;
+        margin: 5px;
+    }
+
+    .head1 {
+        float: left;
+        width: 100px;
+    }
+
+    .head2 {
+        width: 70%;
+        text-align: center;
+        float: right;
+
+        h1,
+        p {
+            text-align: center;
+            text-indent: 30px;
+            color: saddlebrown;
+        }
+    }
+
+}

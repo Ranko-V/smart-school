@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JQuery click dogadjaj primer</title>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+    <h1>JQuery click primer</h1>
+
+    <div id="OutputDiv">Ovo je div</div>
+    <div id="IspisDiv">Ovde treba da se ispise tekst</div>
+    <label for="tekst">Unesi tekst</label>
+    <input id="tekst" type="text" value="Moje ime">
+    <select id="gradovi">
+        <option value="SU">Subotica</option>
+        <option value="NS">Novi Sad</option>
+        <option value="SO">Sombor</option>
+    </select>
+    <script>
+        $(document).ready(function() {
+            $('#OutputDiv').click(function() {
+                alert('Kliknuli smo.');
+            });
+
+            $('#IspisDiv').click(function() {
+                $('#tekst').val('dhfgdhgfdg');
+            });
+
+            $('#gradovi').change(function() {
+                alert("izabrali ste: " + $(this).val());
+            });
+        });
+
+    </script>
+</body>
+
+</html>

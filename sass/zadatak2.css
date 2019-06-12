@@ -1,0 +1,24 @@
+nav {
+  background: #f9ed69;
+  color: #333;
+  overflow: hidden;
+  margin: 0;
+  padding: 0; }
+  nav ul {
+    margin: 0;
+    padding: 0; }
+  nav li {
+    display: inline;
+    float: left; }
+    nav li:last-child {
+      float: right;
+      color: #b83b5e; }
+  nav a {
+    text-decoration: none;
+    display: block;
+    padding: 10px 16px; }
+    nav a:hover {
+      color: #b83b5e; }
+
+.desni {
+  color: #b83b5e; }

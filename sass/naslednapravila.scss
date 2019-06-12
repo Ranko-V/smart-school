@@ -1,0 +1,56 @@
+.con {
+    h1 {
+        color: red;
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 18px;
+        color: green;
+    }
+
+    .box {
+        h1 {
+            color: blue;
+        }
+
+        p {
+            font-size: 22px;
+        }
+    }
+}
+
+a {
+    font-size: 20px;
+    color: aliceblue;
+
+    &:hover {
+        background: blue;
+    }
+}
+
+h2 {
+    font-size: 20px;
+    color: brown;
+
+    &:hover {
+        background: yellow;
+    }
+}
+
+.headblue {
+    &.jos {
+        text-align: center;
+    }
+
+
+}
+
+.line {
+    font: {
+        family: Verdana;
+        size: 20px;
+        weight: bold;
+        variant: small-caps;
+    }
+}

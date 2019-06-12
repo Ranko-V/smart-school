@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //definisanje objekta
+        var hotel = {
+            naziv: "Hotel Park",
+            adresa: "Novosadskog sajma 35",
+            brojSoba: 140,
+            rezervisano: 57,
+            teretana: true,
+            brojSlobodnihSoba: function() {
+                return this.brojSoba - this.rezervisano;
+            }
+        };
+
+        //pristupanje propertiju
+        var nazivHotela = hotel.naziv; //prvi nacin
+        console.log(nazivHotela);
+
+        var adresaHotela = hotel["adresa"]; //drugi nacin
+        console.log(adresaHotela);
+
+        //pristupanje metodi objekta
+        var slobodneSobe = hotel.brojSlobodnihSoba();
+        console.log(slobodneSobe);
+
+        //promena vrednosti propertija
+        hotel.teretana = false;
+        console.log("ceo objekat: ", hotel);
+
+        //naknadno dodavanje propertija u objekat
+        hotel.grad = "Novi Sad";
+        console.log("grad: " + hotel.grad);
+
+        //naknadno dodavanje metode u objekat
+        hotel.punaAdresa = function() {
+            return this.grad + ", " + this.adresa;
+
+        }
+
+        var adresa = hotel.punaAdresa();
+        console.log(adresa);
+
+        //kreirati metode za rezervaciju soba
+        //prva metoda uvecava broj slobodnih soba za jedan
+        //druga metoda smanjuje broj slobodnih soba za jedan
+
+        //       hotel.uvecajBrojSoba = function() {
+        // return this.brojSlobodnihSoba() + 1;
+        // }
+        //
+        // var noviBrojSoba = hotel.uvecajBrojSoba();
+        // console.log(noviBrojSoba);
+
+        hotel.smanjiBrojSoba = function() {
+            return this.brojSlobodnihSoba() - 1;
+        }
+
+        var noviBrojSoba = hotel.smanjiBrojSoba();
+        console.log(noviBrojSoba);
+
+    </script>
+</body>
+
+</html>

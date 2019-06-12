@@ -1,0 +1,16 @@
+a {
+  font-size: 20px; }
+  a:link {
+    color: blue; }
+  a:hover {
+    text-decoration: underline;
+    background-color: yellow;
+    color: red; }
+  a:active {
+    color: green; }
+  a:visited {
+    color: purple; }
+
+.box p:first-child {
+  background: blue;
+  color: white; }

@@ -1,0 +1,11 @@
+node.js
+node-sass instaliramo tako sto u cmdu kucamo npm install -g node-sass
+
+u cmdu uci u folder fajla
+
+
+node-sass -o ./ style.scss    za konvertovanje scss fajla u css
+
+
+
+node-sass -o ./ style.scss -w    za pracenje

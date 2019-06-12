@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+
+
+</head>
+
+<body>
+    <p><button id="dugme">klikni</button></p>
+    <p id="pasus">lorem ipsum...</p>
+    <script>
+        $(document).ready(function() {
+            $('#dugme').click(function() {
+                $('#pasus')
+                    .css('background', '#ff0')
+                    .slideUp(2000)
+                    .slideDown(2000)
+            });
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //racuna se prosek ocena
+        var ocene = [8, 7, 6, 9, 8, 10, 8];
+        var ime_prez = ["Marko", "Markovic"];
+
+
+        function prosek(ocene1, ime1) {
+            var zbirOcena = 0;
+            for (var i = 0; i < ocene1.length; i++) {
+                zbirOcena += ocene1[i];
+            }
+            var prosecnaOcena = zbirOcena / ocene1.length;
+
+            alert("Student " + ime1[0] + " " + ime1[1] + " ima prosek ocena " + prosecnaOcena + ".");
+            console.log("Student " + ime1[0] + " " + ime1[1] + " ima prosek ocena " + prosecnaOcena + ".");
+        }
+        prosek(ocene, ime_prez);
+
+    </script>
+</body>
+
+</html>

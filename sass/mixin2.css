@@ -1,0 +1,14 @@
+h1 {
+  border-color: blue;
+  border-width: 3px;
+  border-style: dashed; }
+
+.style {
+  background: gray;
+  border: 5px solid black;
+  width: 450px; }
+
+.content {
+  background: brown;
+  border: "" solid black;
+  width: 450px; }

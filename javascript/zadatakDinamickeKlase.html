@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .obojiPasus {
+            background: blue;
+            color: white;
+            padding: 10px;
+        }
+
+        .obojiPasusDrugacije {
+            background: green;
+            color: beige;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <p class="stilizovaniPasus">Ovo je prvi pasus!</p>
+    <p class="stilizovaniPasus">Ovo je drugi pasus!</p>
+    <p class="stilizovaniPasus">Ovo je treci pasus!</p>
+    <button onclick="prva('obojiPasus')">Prvo</button>
+    <button onclick="druga('obojiPasus')">Drugo</button>
+    <button onclick="treca('obojiPasusDrugacije')">Trece</button>
+    <script>
+        function prva(par1) {
+            for (var i = 0; i < 3; i++) {
+                var element = document.getElementsByClassName("stilizovaniPasus")[i];
+
+                element.classList.add(par1);
+            }
+        }
+
+        function druga(par1) {
+            for (var i = 0; i < 3; i++) {
+                var element = document.getElementsByClassName("stilizovaniPasus")[i];
+
+                element.classList.remove(par1);
+            }
+        }
+
+        function treca(par1) {
+            for (var i = 0; i < 3; i++) {
+                var element = document.getElementsByClassName("stilizovaniPasus")[i];
+
+                element.classList.toggle(par1);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

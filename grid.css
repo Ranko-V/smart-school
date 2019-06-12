@@ -1,0 +1,82 @@
+.row {
+    background: black;
+    width: 100%;
+}
+
+.col-1 {
+    float: left;
+    background: rgba(210, 118, 30, 0.5);
+    width: 8.3333%;
+}
+
+.col-2 {
+    float: left;
+    background: rgba(10, 18, 30, 0.5);
+    width: 16.6666%;
+}
+
+.col-3 {
+    float: left;
+    background: rgba(130, 118, 30, 0.5);
+    width: 25%;
+}
+
+.col-4 {
+    float: left;
+    background: rgba(10, 118, 130, 0.5);
+    width: 33.3333%;
+}
+
+.col-5 {
+    float: left;
+    background: rgba(105, 185, 30, 0.5);
+    width: 41.65%;
+}
+
+.col-6 {
+    float: left;
+    background: rgba(70, 18, 130, 0.5);
+    width: 50%;
+}
+
+.col-7 {
+    float: left;
+    background: rgba(70, 218, 110, 0.5);
+    width: 58.31%;
+}
+
+.col-8 {
+    float: left;
+    background: rgba(20, 118, 180, 0.5);
+    width: 66.64%;
+}
+
+.col-8 {
+    float: left;
+    background: rgba(20, 118, 180, 0.5);
+    width: 66.64%;
+}
+
+.col-9 {
+    float: left;
+    background: rgba(230, 218, 10, 0.5);
+    width: 74.9997%;
+}
+
+.col-10 {
+    float: left;
+    background: rgba(20, 1, 10, 0.5);
+    width: 83.3333%;
+}
+
+.col-11 {
+    float: left;
+    background: rgba(220, 118, 180, 0.5);
+    width: 91.63%;
+}
+
+.col-12 {
+    float: left;
+    background: rgba(29, 118, 180, 0.5);
+    width: 100%;
+}

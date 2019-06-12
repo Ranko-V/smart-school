@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>slider</title>
+    <style>
+        @keyframes bimg {
+            0% {
+                left: 0%;
+            }
+
+            12.5% {
+                left: 0%;
+            }
+
+            25% {
+                left: -100%;
+            }
+
+            37.5% {
+                left: -100%;
+            }
+
+            50% {
+                left: -200%;
+            }
+
+            62.5% {
+                left: -200%;
+            }
+
+            75% {
+                left: -300%;
+            }
+
+            87.5% {
+                left: -300%;
+            }
+
+            100% {
+                left: -400%;
+            }
+
+
+
+        }
+
+        .a {
+            overflow: hidden;
+        }
+
+        .b {
+            width: 500%;
+            position: relative;
+
+            animation: 10s bimg infinite;
+        }
+
+        .b img {
+            float: left;
+            width: 20%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="a">
+        <div class="b">
+            <img src="sajt1/HTML-CSS-Materijal/banner1.png" alt="">
+            <img src="sajt1/HTML-CSS-Materijal/banner2.png" alt="">
+            <img src="sajt1/HTML-CSS-Materijal/banner3.png" alt="">
+            <img src="sajt1/HTML-CSS-Materijal/banner4.png" alt="">
+            <img src="sajt1/HTML-CSS-Materijal/banner1.png" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

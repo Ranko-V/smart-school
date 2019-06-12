@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <style>
+        #box {
+            background: maroon;
+            color: white;
+            padding: 10px;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <p><button id="dugme1">Animacija 1</button></p>
+    <p><button id="dugme2">Animacija 2</button></p>
+    <p><button id="dugme3">Animacija 3</button></p>
+    <div id="box">Text</div>
+    <script>
+        $(document).ready(function() {
+            //animacija 1
+            $('#dugme1').click(function() {
+                $('#box').animate({
+                    'left': '150px'
+                });
+            });
+
+            //animacija 2
+            $('#dugme2').click(function() {
+                $('#box').animate({
+                    left: '250px',
+                    opacity: '0.5px',
+                    height: '200px',
+                    width: '120px',
+                    paddingLeft: '40px'
+                }, 3000); //trajanje animacije
+            });
+
+            //animacija 3 - queuing
+            $('#dugme3').click(function() {
+                var kocka = $('#box');
+                kocka.animate({
+                    height: '300px'
+                }, 3000);
+                kocka.animate({
+                    width: '300px'
+                }, 'slow');
+                kocka.animate({
+                    fontSize: '36px'
+                }, 'fast');
+                kocka.animate({
+                    height: '100px'
+                }, 'slow');
+                kocka.animate({
+                    width: '100px'
+                }, 2000);
+            });
+        });
+
+    </script>
+</body>
+
+</html>

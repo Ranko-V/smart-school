@@ -1,0 +1,13 @@
+$baseFontSize: 16px;
+
+p {
+    font-size: $baseFontSize + 6 * 2;
+}
+
+h2 {
+    font-size: $baseFontSize * (6 + 2);
+}
+
+h3 {
+    font-size: $baseFontSize * 6 + 2;
+}

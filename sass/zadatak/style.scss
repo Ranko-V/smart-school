@@ -1,0 +1,10 @@
+@import "varijable.scss";
+@import "reset.scss";
+@import "header.scss";
+@import "content.scss";
+@import "footer.scss";
+
+html {
+    font-family: Verdana;
+    background: $pozadina;
+}

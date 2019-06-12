@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JQuery toggle klasa primer</title>
+    <style type="text/css">
+        .mojaKlasa {
+            background-color: yellow;
+            color: White;
+            width: 200px;
+        }
+
+    </style>
+    <script src="jquery-3.4.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <h1>JQuery toggle klasa primer</h1>
+
+    <h3>Riblja čorba</h3>
+    <p>Pogledaj dom svoj, anđele</p>
+
+    <label for="tekst">Unesi tekst</label>
+    <input id="tekst" type="text" onfocus="menjajKlasu(this)">
+
+    <script>
+        $(document).ready(function() {
+
+            //toggleClass
+            $('h1').click(function() {
+                $('h3').toggleClass('mojaKlasa');
+
+            });
+        });
+
+        function menjajKlasu(inputPolje) {
+            console.log(inputPolje);
+            $(inputPolje).toggleClass("mojaKlasa");
+        };
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+$baseFontSize: 14px;
+$color1: #333399;
+$color2: #cc3399;
+
+h2 {
+    font-size: $baseFontSize +6;
+    color: $color1 + $color2;
+}
+
+h3 {
+    font-size: $baseFontSize/4;
+}
+
+h4 {
+    font-size: $baseFontSize/4;
+}
+
+.para1 {
+    font-size: $baseFontSize*5;
+}
+
+.para2 {
+    font-size: $baseFontSize*1.5;
+}
+
+.para1 {
+    font-size: $baseFontSize*5;
+}

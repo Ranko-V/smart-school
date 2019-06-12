@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="osoba"></p>
+
+    <script>
+        var person = {
+            name: "Pera",
+            lastname: "Detlic",
+            age: 35,
+        };
+
+        var txt = "";
+        for (var x in person) {
+            console.log(person[x]);
+            txt += person[x] + " ";
+        }
+
+        document.getElementById("osoba").innerHTML = txt;
+
+        //definisanje object constructora
+        function Osoba(first, last, age, eyes) {
+            this.firstname = first;
+            this.lastname = last;
+            this.age = age;
+            this.eyes = eyes;
+        }
+
+        //kreiranje objekta
+        var osoba1 = new Osoba("mi", "de", 33, "plava");
+        console.log(osoba1.lastname);
+
+        var osoba2 = new Osoba("m3i", "de1", 333, "zuta");
+        console.log(osoba2.lastname);
+
+        osoba1.city = "Novi Sad";
+
+        osoba2.fullName = function() {
+            return this.firstname + " " + this.lastname;
+        }
+        console.log(osoba1);
+        console.log(osoba2);
+
+
+        //Osoba.state = "Srbija";  nece funkcionisati
+
+        //ovako se jos moze ubaciti property, osim direktno u constructor
+        Osoba.prototype.nationality = "Serbia";
+        console.log(osoba2);
+
+    </script>
+</body>
+
+</html>

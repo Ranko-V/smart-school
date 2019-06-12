@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function napraviAkronim(fraza) {
+            var niz = fraza.split(" ");
+            var akronim = "";
+            for (var i = 0; i < niz.length; i++) {
+                akronim += niz[i][0];
+            }
+            console.log(akronim.toUpperCase());
+        }
+        napraviAkronim("random access memory");
+        napraviAkronim("gfhg ljfgh fjghdfj ghdfjkghdfjk");
+
+
+        //duzi nacin...
+        //        function akronimisi(fraza) {
+        //            var niz = fraza.split("");
+        //            var akronim = niz[0];
+        //            for (var i = 1; i < niz.length; i++) {
+        //                if (niz[i] === " ") {
+        //                    akronim += niz[i + 1];
+        //                }
+        //            }
+        //            akronim.toUpperCase();
+        //            console.log(akronim);
+        //        }
+        //        akronimisi("random access memory");
+
+    </script>
+</body>
+
+</html>

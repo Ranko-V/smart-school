@@ -1,0 +1,14 @@
+.err, .att {
+  border: 1px solid red;
+  background: grey; }
+
+.att {
+  color: blue; }
+
+.bbase, .ebutton {
+  padding: 20px;
+  margin: 20px;
+  color: yellow; }
+
+.ebase, .ebutton {
+  background: red; }

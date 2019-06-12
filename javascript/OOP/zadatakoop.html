@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div onclick="this.remove()">Lorem ipsum...</div>
+    <script>
+        ucenik1 = {
+            ime: 'Marko',
+            prezime: 'Petrović',
+            razred: 'II-2'
+        };
+        ucenik2 = {
+            ime: 'Marko',
+            prezime: 'Petrović',
+            razred: 'II-2'
+        };
+        console.log(ucenik1 == ucenik2);
+        class Vozilo {
+            constructor(naziv, podloga) {
+                this.naziv = naziv;
+                this.podloga = podloga;
+            }
+
+            start() {
+                console.log(`${this.naziv} startuje.`);
+            }
+            kreni() {
+                console.log(`${this.naziv} krece.`);
+            }
+            stop() {
+                console.log(`${this.naziv} stopuje.`);
+            }
+        }
+
+        class Avion extends Vozilo {
+            constructor(naziv, podloga) {
+                super(naziv, podloga);
+            }
+
+            poletanje() {
+                console.log(`${this.naziv} polece.`);
+            }
+        }
+
+        class Brod extends Vozilo {
+            constructor(naziv, podloga) {
+                super(naziv, podloga);
+            }
+
+            plovi() {
+                console.log(`${this.naziv} plovi.`);
+            }
+        }
+
+        class Kamion extends Vozilo {
+            constructor(naziv, podloga) {
+                super(naziv, podloga);
+            }
+
+            brmbrm() {
+                console.log(`${this.naziv} se cuje brm brm.`);
+            }
+        }
+
+        let boing = new Avion('boing', 'vazduh');
+        boing.poletanje();
+
+        let ledolomac = new Brod('ledolomac', 'voda');
+        ledolomac.plovi();
+
+        let tamic = new Kamion('tamic', 'kopno');
+        tamic.brmbrm();
+
+    </script>
+</body>
+
+</html>

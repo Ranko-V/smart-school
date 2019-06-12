@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="drugicas.js"></script>
+</head>
+
+<body>
+    <input type="button" value="otvori" onclick="openWindow()">
+    <input type="button" value="zatvori" onclick="closeWindow()">
+    <input type="button" value="stampaj" onclick="stampaj()">
+    <a href="#" onclick="unesiVrednost()">unesi vrednost</a>
+    <a href="#" onclick="status()">brisi</a>
+    <br>
+    <br>
+    <p id="tekst">Ovaj tekst treba da se prikaze</p>
+    <input type="button" value="prikazi tekst" onclick="prikazTeksta()">
+
+    <p>ovaj se ne prikazuje</p>
+    <p>ovaj iskace u pop-upu</p>
+    <input type="button" value="prikazi drugi p" onclick="prikaziTekstIOfarbaj()">
+
+
+    <div class="prvi" onmouseover="stilizujDivove()" onmouseout="resetujDivove()"> dsfd wtr thyty ttyrtd</div>
+
+    <div class="prvi">dshfds fhdsf df dsfhds hfdss</div>
+    <input type="button" value="stilizuj divove">
+    <input type="button" value="stilizuj query" onclick="selektujQuery()">
+    <br>
+    <br>
+    <button onclick="verzijaPretrazivaca()">try it</button>
+    <p id="podaci"></p>
+    <br>
+    <p>
+        <a href="#" onclick="vratiHref()">window.location.href</a> vraca href ili url
+    </p>
+    <br>
+    <p id="demo1"></p>
+    <p>
+        <a href="#" onclick="uradiAssign()">window.location.assign</a> vraca href ili url
+    </p>
+    <br>
+    <p>dan/mesec/godina</p>
+    <input type="button" value="datum" onclick="prikaziDatum()">
+    <p id="datum"></p>
+
+    <input type="button" value="for" onclick="petlja()">
+    <input type="button" value="while" onclick="petlja2()">
+    <input type="button" value="do while" onclick="petlja3()">
+</body>
+
+</html>

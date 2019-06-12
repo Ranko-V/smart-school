@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--    <link rel="stylesheet" href="vezba%2018.3.css.css">-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .meni ul {
+            list-style: none;
+        }
+
+        .meni ul li {
+            float: left;
+            background: #e00;
+            width: 100px;
+            padding: 5px 2px;
+            margin: 1px;
+        }
+
+        .podmeni ul {
+            display: none;
+        }
+
+        .podmeni:hover ul {
+            display: block;
+
+        }
+
+        .podmeni ul li {
+            background: rgb(255, 255, 0);
+            width: 96px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--
+<nav>
+    <ul>
+        <li><a href="#">Samba</a></li>
+        <li><a href="#">Rumba</a></li>
+        <li><a href="#">Cha cha cha</a></li>
+        <li><a href="#">Salsa</a></li>
+        <li><a href="#">Arg. Tango</a></li>
+        <li><a href="#">Mambo</a></li>
+    </ul>
+</nav>
+-->
+    <div class="meni">
+        <ul>
+            <li><a href="#">home</a></li>
+            <li class="podmeni"><a href="#">deca</a>
+                <ul>
+                    <li><a href="#">slika 1</a></li>
+                    <li><a href="#">slika 2</a></li>
+                    <li><a href="#">slika 3</a></li>
+                </ul>
+            </li>
+            <li class="podmeni"><a href="#">odrasli</a>
+                <ul>
+                    <li><a href="#">fotka 1</a></li>
+                    <li><a href="#">fotka 2</a></li>
+                </ul>
+            </li>
+            <li><a href="#">kontakt</a></li>
+
+        </ul>
+    </div>
+</body>
+
+</html>

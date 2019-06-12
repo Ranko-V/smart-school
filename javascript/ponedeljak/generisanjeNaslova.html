@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function generisi(pocetak, kraj) {
+            var naslovi = "";
+            for (var i = pocetak; i <= kraj; i++) {
+                naslovi += "<h" + i + ">" + "Ovo je generisan naslov. </h" + i + ">";
+            }
+            document.write(naslovi);
+        }
+        generisi(3, 5);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="br"></p>
+    <script>
+        var hotel = {
+            naziv: "Park",
+            adresa: "Nsajma 35",
+            brojSoba: 140,
+            rezervisano: 57,
+            bazen: true,
+            brojSlobodnihSoba: function() {
+                return this.brojSoba - this.rezervisano;
+            },
+        };
+
+        hotel.izracunajCenu = function(nocenja) {
+            document.getElementById("br").innerHTML = "Cena boravka je: " + nocenja * 8900;
+
+        };
+
+        hotel.izracunajCenu(prompt("koliko ostajete?"));
+
+        hotel.rezervisiVise = function(kolikoSoba) {
+            return this.rezervisano += parseFloat(kolikoSoba);
+        };
+        hotel.rezervisiVise(prompt("koliko soba Vam treba?"));
+        console.log(hotel.brojSlobodnihSoba());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+$colorSuc1: #dff0d8;
+$colorSuc2: #d6e9c6;
+$colorDan1: #f2dede;
+$colorDan2: #ebccd1;
+$colorWar1: #fcf8e3;
+$colorWar2: #faebcc;
+$colorInf1: #d9edf7;
+$colorInf2: #bce8f1;
+
+
+.div {
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 30px;
+
+    &.success {
+        background-color: $colorSuc1;
+        border-left: 4px solid $colorSuc2;
+    }
+
+    &.danger {
+        background-color: $colorDan1;
+        border-left: 4px solid $colorDan2;
+    }
+
+    &.warning {
+        background-color: $colorWar1;
+        border-left: 4px solid $colorWar2;
+    }
+
+    &.info {
+        background-color: $colorInf1;
+        border-left: 4px solid $colorInf2;
+    }
+}

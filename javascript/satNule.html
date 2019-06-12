@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="display: flex">
+        <h1 id="sat" style="background: blue; padding: 5px 25px; display: inline; border-radius: 5px; margin: auto; color: white"></h1>
+    </div>
+
+    <script>
+        function ispisi() {
+            var danas = new Date();
+            var sati = danas.getHours();
+            var minuti = danas.getMinutes();
+            var sekunde = danas.getSeconds();
+            var dani = danas.getDate();
+            var meseci = danas.getMonth() + 1;
+            var godine = danas.getFullYear();
+            var nula1 = "";
+            var nula2 = "";
+            var nula3 = "";
+            var nula4 = "";
+            var nula5 = "";
+            if (dani < 10) {
+                nula1 = "0";
+            }
+            if (meseci < 10) {
+                nula2 = "0";
+            }
+            if (sati < 10) {
+                nula3 = "0";
+            }
+            if (minuti < 10) {
+                nula4 = "0";
+            }
+            if (sekunde < 10) {
+                nula5 = "0";
+            }
+            document.getElementById("sat").innerHTML = nula1 + dani + "." + nula2 + meseci + "." + godine + ". " + nula3 + sati + ":" + nula4 + minuti + ":" + nula5 + sekunde;
+
+        }
+        ispisi();
+        setInterval(ispisi, 1000);
+
+
+        //lakse sa funkcijom
+        function dodajNulu(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+
+    </script>
+</body>
+
+</html>

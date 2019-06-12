@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Personalne informacije</legend>
+            Ime:
+            <input type="text" name="ime"><br><br>
+            Prezime:
+            <input type="text" name="prezime" required><br><br>
+            Adresa:
+            <textarea name="adresa" cols="35" rows="3"></textarea>
+            Grad:
+            <select name="grad" size="3">
+                <option value="Cacak">Cacak</option>
+                <option value="bg">Bg</option>
+                <option value="Nis" selected>Nis</option>
+                <option value="ns">NS</option><br>
+            </select>
+            <br><br>
+            Pol: <input type="radio" name="pol" value="muski">Muski
+            <input type="radio" name="pol" value="zenski">Zenski
+            <br><br>
+            Godine: <select name="godine">
+                <option value="1">0 - 15</option>
+                <option value="2">16 - 30</option>
+                <option value="3">31 - 45</option>
+                <option value="4">46+</option><br>
+            </select><br><br>
+            <input type="checkbox" name="zelim" value="zelim" checked> Da, zelim da...
+            <br><br>
+            <input type="submit" value="posalji">
+            <input type="reset" value="obrisi">
+            <input type="date">
+        </fieldset>
+    </form>
+</body>
+
+</html>

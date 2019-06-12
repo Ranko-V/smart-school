@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JQuery Primer - Selektori</title>
+    <style type="text/css">
+        .BlueDiv {
+            background-color: Navy;
+            color: White;
+            width: 200px;
+        }
+
+        .RedDiv {
+            background-color: Red;
+            color: White;
+            width: 200px;
+        }
+
+        .style1 {
+            width: 100%;
+        }
+
+    </style>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+    <h1>JQuery Primer</h1>
+    <div id="TestDiv" title="Div Title">
+        Ovo je moj div tekst
+    </div>
+    <div id="OutputDiv" title="Title Div 2 ">Neki drugi moj div</div>
+
+    <div title="Contains Table">
+        <table id="DataTable" border="1">
+            <tr>
+                <td>Ćelija 1 Red 1</td>
+            </tr>
+            <tr>
+                <td>Ćelija 1 Red 2</td>
+            </tr>
+            <tr>
+                <td>Ćelija 1 Red 3</td>
+            </tr>
+            <tr>
+                <td>
+                    <table style="width:100%">
+                        <tr>
+                            <td>Ugneždena tabela sa ćelijom i redom</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br />
+    </div>
+
+    <div class="BlueDiv">
+        <span>Plavi span u div</span>
+    </div>
+    <br />
+    <span class="BlueDiv">Ovo je plavi plavi span</span>
+    <br />
+    <div class="RedDiv">
+        <span>Crveni div</span>
+    </div>
+
+    <form id="form1">
+        <table style="width:300px;">
+            <tr>
+                <td style="width:30%;">Ime</td>
+                <td style="width:70%;">
+                    <input id="FirstNameTextBox" value="Pera" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>Prezime</td>
+                <td>
+                    <input id="LastNameTextBox" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>Komentari</td>
+                <td>
+                    <textarea rows="5" cols="60" id="CommentsTextBox">Tekst za unos</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select id="sel">
+                        <option value="SU">Subotica</option>
+                        <option value="NS" selected="true">Novi Sad</option>
+                    </select>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="SubmitButton" type="button" value="Unesi" />
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        //        $(document).ready(function() {
+        //            //brojanje p elemenata
+        //            var paragraf = $('p');
+        //            console.log("ima ukupno paragrafa " + paragraf.length);
+        //
+        //            //izbroj sve div tagove
+        //            //dodati crvenu boju teksta svim tim elementima
+        //            var divovi = $('div');
+        //            console.log("ima ukupno divova " + divovi.length);
+        //
+        //            $('div').css('color', 'red');
+        //        });
+
+
+
+        //        $(document).ready(function() {
+        //            alert($('#TestDiv').html()); // dohvaticemo ceo html element 
+        //            alert($('#TestDiv').text()); // dohvaticemo samo text
+        //
+        //        });
+
+        //vezba 1 - prikazati html kod elementa koji ima Id form1
+        $(document).ready(function() {
+            console.log($('#form1').html());
+        });
+
+        //vezba 2 - ofarbati tekst u zelenu boju za element ID CommentsTextBox
+        $(document).ready(function() {
+            $('#CommentsTextBox').css('color', 'green');
+        });
+
+
+
+
+        //selektovanje elemenata prema klasi
+        //        $(document).ready(function() {
+        //            stilizujElement();
+        //            $('.BlueDiv').css('border', '5px solid red');
+        //            $('.RedDiv').css('border', '5px solid yellow');
+        //        });
+        //
+        //        function stilizujElement() {
+        //            console.log("pozvati ovu funkciju");
+        //        };
+
+
+        //selektovati div sa klasom BlueDiv i postaviti neki border
+        $(document).ready(function() {
+            $('div.BlueDiv').css('border', '5px solid red');
+            $('.BlueDiv, .RedDiv').css({
+                "font-size": "25px",
+                "color": "yellow"
+            });
+
+        });
+
+        //dodavanje vise css pravila
+
+    </script>
+</body>
+
+</html>

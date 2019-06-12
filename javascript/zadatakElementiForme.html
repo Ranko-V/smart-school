@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" id="ime" name="ime" value="Donald">
+        <input type="text" name="prezime" value="Duck">
+        <input type="text" name="grad" value="Duckburg">
+        <p id="demo"></p>
+        <input type="button" value="prikazi" onclick="prikaz()">
+    </form>
+    <script>
+        function prikaz() {
+            document.getElementById("demo").innerHTML += document.getElementsByName("ime")[0].value + " ";
+            document.getElementById("demo").innerHTML += document.getElementsByName("prezime")[0].value + " ";
+            document.getElementById("demo").innerHTML += document.getElementsByName("grad")[0].value;
+        };
+
+    </script>
+</body>
+
+</html>

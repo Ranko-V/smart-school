@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JQuery - Interakcija sa DOM</title>
+    <style type="text/css">
+        .mojaKlasa {
+            background: navy;
+            color: White;
+            width: 200px;
+        }
+
+        .mojaKlasa1 {
+            background: red;
+            color: White;
+            width: 300px;
+        }
+
+    </style>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+    <h1>JQuery primer - Dodavanje klase</h1>
+
+    <div id="OutputDiv">Ovo je prvi div</div>
+    <h3>Riblja čorba</h3>
+    <p>Pogledaj dom svoj, anđele</p>
+
+    <div id="TestDiv">
+        Ovo je moj div tekst
+    </div>
+    <script>
+        $(document).ready(function() {
+
+            //dodavanje klase, add class
+            $('#OutputDiv').addClass('mojaKlasa');
+            $('h3, p').addClass('mojaKlasa');
+
+            //brisanje klase, removeClass
+            $('#OutputDiv').removeClass('mojaKlasa');
+        });
+
+    </script>
+</body>
+
+</html>

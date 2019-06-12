@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="myForm">
+        <div>
+            Ime:
+            <input type="text" name="Name">
+        </div>
+        <div>
+            Email:
+            <input type="text" name="EMail">
+        </div>
+        <div>
+            Postanski broj:
+            <input type="text" name="Zip">
+        </div>
+        <div>
+            Grad:
+            <select name="City">
+                <option value="-1" selected>--Odaberite--</option>
+                <option value="1">Novi Sad</option>
+                <option value="2">Beograd</option>
+                <option value="3">Nis</option>
+            </select>
+        </div>
+        <input type="button" value="Posalji" onclick="validate()">
+    </form>
+    <script>
+        function validate() {
+            //input name
+            if (document.myForm.Name.value === "") {
+                alert("Molimo unesite ime!");
+                document.myForm.Name.focus();
+                return false;
+            }
+
+            //input email
+
+            if (document.myForm.EMail.value === "") {
+                alert("Molimo unesite email!");
+                document.myForm.EMail.focus();
+                return false;
+            } else if (emailIsValid(document.myForm.EMail.value) === false) {
+                alert("Molimo unesite ispravnu email adresu!");
+                document.myForm.EMail.focus;
+                return false;
+            }
+
+            //input zipcode
+            if (document.myForm.Zip.value === "" || isNaN(document.myForm.Zip.value) || document.myForm.Zip.value.length !== 5) {
+                alert("Molimo unesite postanski broj!");
+                document.myForm.Zip.focus();
+                return false;
+            }
+
+            //select city
+            if (document.myForm.City.value === "") {
+                alert("Molimo unesite grad!");
+                return false;
+            }
+
+            //validna forma
+            alert("Forma uspesno poslata.");
+            return true;
+        }
+
+        //validacija email adrese
+        function emailIsValid(email) {
+            return /\S+@\S+\.\S+/.test(email); //ovo se zove regexp, samo smo kopirali, ima da se nadje na netu. Proverava format emaila.
+        }
+
+    </script>
+</body>
+
+</html>

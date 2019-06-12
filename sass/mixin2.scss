@@ -1,0 +1,29 @@
+@mixin custom-border($color, $width) {
+    border: {
+        color: $color;
+        width: $width;
+        style: dashed;
+    }
+}
+
+h1 {
+    @include custom-border(blue, 3px);
+}
+
+@mixin bored($width: 12px, $color: red) {
+    background: $color;
+    border: $width solid black;
+    width: 450px;
+}
+
+.style {
+    @include bored(5px, gray);
+}
+
+.content {
+    @include bored("", brown);
+}
+
+@mixin transform($property) {
+    webkit
+}

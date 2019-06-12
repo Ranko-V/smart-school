@@ -1,0 +1,175 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript nizovi - Zadatak</title>
+</head>
+
+<body>
+
+    <p>1.1. Proći kroz niz objekata i ispisati ime i prezime svih osoba u okviru nekog div-a</p>
+    <p>1.2. Dohvatiti podatak samo za osobu "Galilei Galileo"</p>
+    <p>1.3. Proći kroz niz objekata i pronaći sve osobe koje su rođene 1500tih</p>
+    <p>1.4. Sortirati niz prema rođenju, od najstarijih ka najmladjima (koristiti sort funkciju, od 14.. prema 18..)</p>
+    <p>1.5. Sortirati niz prema godini kada su preminuli (od 19.. prema 15..)</p>
+    <p>1.6. Sabrati koliko su ukupno godina sve osobe zajedno zivele</p>
+
+    <div id="imena"></div>
+    <br>
+    <hr>
+    <br>
+    <div id="imena2"></div><br>
+    <hr>
+    <br>
+    <div id="imena3"></div>
+    <hr>
+    <br>
+    <div id="imena4"></div>
+    <hr>
+    <br>
+    <div id="imena5"></div>
+    <hr>
+    <br>
+    <div id="imena6"></div>
+    <script>
+        var inventors = [{
+                first: 'Albert',
+                last: 'Einstein',
+                year: 1879,
+                passed: 1955
+            },
+            {
+                first: 'Isaac',
+                last: 'Newton',
+                year: 1643,
+                passed: 1727
+            },
+            {
+                first: 'Galileo',
+                last: 'Galilei',
+                year: 1564,
+                passed: 1642
+            },
+            {
+                first: 'Marie',
+                last: 'Curie',
+                year: 1867,
+                passed: 1934
+            },
+            {
+                first: 'Johannes',
+                last: 'Kepler',
+                year: 1571,
+                passed: 1630
+            },
+            {
+                first: 'Nicolaus',
+                last: 'Copernicus',
+                year: 1473,
+                passed: 1543
+            },
+            {
+                first: 'Max',
+                last: 'Planck',
+                year: 1858,
+                passed: 1947
+            },
+            {
+                first: 'Katherine',
+                last: 'Blodgett',
+                year: 1898,
+                passed: 1979
+            },
+            {
+                first: 'Ada',
+                last: 'Lovelace',
+                year: 1815,
+                passed: 1852
+            },
+            {
+                first: 'Sarah E.',
+                last: 'Goode',
+                year: 1855,
+                passed: 1905
+            },
+            {
+                first: 'Lise',
+                last: 'Meitner',
+                year: 1878,
+                passed: 1968
+            },
+            {
+                first: 'Hanna',
+                last: 'Hammarstrom',
+                year: 1829,
+                passed: 1909
+            }
+        ];
+        //1.1 ispis imena
+        function ispisi() {
+            for (var i = 0; i < inventors.length; i++) {
+                document.getElementById("imena").innerHTML += inventors[i].first + " " + inventors[i].last + "<br>";
+            }
+        }
+        ispisi();
+
+        //1.2. ipak se okrece
+        function galileo() {
+            for (var i = 0; i < inventors.length; i++) {
+                if (inventors[i].last === "Galilei") {
+                    document.getElementById("imena2").innerHTML = inventors[i].first + " " + inventors[i].last;
+                }
+            }
+        }
+        galileo();
+        //var person = inventors.filter(function(inventor){return investor.first ==="Galileo";})
+
+        //1.3. godina rodjenja
+        function rodjeni(god) {
+            if (god.year > 1499 && god.year < 1600) {
+                return god;
+            };
+        }
+
+        function filtrodj() {
+
+            var ber = inventors.filter(rodjeni);
+            for (var i = 0; i < ber.length; i++) {
+                document.getElementById("imena3").innerHTML += ber[i].first + " " + ber[i].last + "<br>";
+            }
+        }
+        filtrodj();
+        //var person = inventors.filter(function(inventor){return investor.year>1500 && investor.year<1600;})
+
+
+
+        //sort
+        var sortirana = inventors.sort(function(a, b) {
+            return a.year - b.year
+        });
+        //        console.log(sortirana);
+        for (var i = 0; i < sortirana.length; i++) {
+            document.getElementById("imena4").innerHTML += sortirana[i].first + " " + sortirana[i].last + " " + sortirana[i].year + "<br>";
+        }
+
+        //sort unazad
+        var sortirana2 = inventors.sort(function(a, b) {
+            return b.passed - a.passed
+        });
+        //        console.log(sortirana);
+        for (var i = 0; i < sortirana.length; i++) {
+            document.getElementById("imena5").innerHTML += sortirana[i].first + " " + sortirana[i].last + " " + sortirana[i].passed + "<br>";
+        }
+
+        //1.6 kolko su ziveli
+        var suma = 0;
+        for (var i = 0; i < inventors.length; i++) {
+            suma += inventors[i].passed - inventors[i].year;
+        }
+        document.getElementById("imena6").innerHTML = suma;
+
+    </script>
+
+</body>
+
+</html>

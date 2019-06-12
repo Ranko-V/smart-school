@@ -1,0 +1,14 @@
+$redColor: red;
+$colorPrimary: #f9ed69;
+$colorSecondary: #f08a5d;
+$colorTertziary: #ff3211;
+
+
+h1 {
+    color: $redColor;
+}
+
+h3 {
+    background: $colorPrimary;
+    color: $colorSecondary;
+}

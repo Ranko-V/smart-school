@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" id="elem" value="klikni me">
+    <button id="testDugme">Dodaj pasus</button>
+
+    <script>
+        var elem = document.getElementById('elem');
+
+        function handler1() {
+            alert("kliknuto");
+        }
+
+        function handler2() {
+            alert("dfbherfheuif");
+        }
+
+        // dodavanje event listenera
+        elem.addEventListener("click", handler1);
+
+        //d
+        var dugme = document.getElementById("testDugme");
+
+        function uZeleno() {
+            dugme.style.backgroundColor = "green";
+            dugme.style.color = "#fff";
+
+        }
+
+        function uZuto() {
+            dugme.style.backgroundColor = "yellow";
+            dugme.style.color = "#000";
+        }
+
+        dugme.addEventListener("mouseover", uZeleno);
+        dugme.addEventListener("mouseout", uZuto);
+
+    </script>
+</body>
+
+</html>

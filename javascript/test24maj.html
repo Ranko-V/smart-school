@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Osoba {
+            constructor(ime, pol, zanimanje, godiste) {
+                this.ime = ime;
+                this.pol = pol;
+                this.zanimanje = zanimanje;
+                this.godiste = godiste;
+            }
+            printBio() {
+                var rodjenje = 'rodjen';
+                if (this.pol === "z") {
+                    rodjenje += "a";
+                }
+                console.log(`Ja sam ${this.zanimanje} ${this.ime}, ${rodjenje} sam ${this.godiste}. godine.`);
+            }
+        }
+
+        class Student extends Osoba {
+            constructor(ime, pol, zanimanje, godiste, broj) {
+                super(ime, pol, zanimanje, godiste);
+                this.index = broj;
+            }
+
+            printIndex() {
+                console.log(`Moj broj indeksa je ${this.index}.`);
+            }
+        }
+
+        class Profesor extends Osoba {
+            constructor(ime, pol, zanimanje, godiste, predmet) {
+                super(ime, pol, zanimanje, godiste);
+                this.predmet = predmet;
+            }
+
+            printPredmet() {
+                console.log(`Predmet koji predajem je  ${this.predmet}.`);
+            }
+        }
+
+        let stud1 = new Student('Ivan', 'm', 'dzabalebaros', 1988, 504);
+        stud1.printIndex();
+        stud1.printBio();
+
+        let stud2 = new Student('Marina', 'z', 'grebator', 1997, 505);
+        stud2.printIndex();
+        stud2.printBio();
+
+
+        let prof1 = new Profesor('Suzana', 'z', 'profesor', 1986, 'html');
+        prof1.printPredmet();
+        prof1.printBio();
+
+
+        let prof2 = new Profesor('Nemanja', 'm', 'profesor', 1987, 'javascript');
+        prof2.printPredmet();
+        prof2.printBio();
+
+    </script>
+</body>
+
+</html>

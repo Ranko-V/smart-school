@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="broj"></p>
+    <script>
+        //najblizi ceo broj
+        var num1 = Math.round(4.7); // na 5
+        var num2 = Math.round(4.4); // na 4
+
+        //na najblizi gornji
+        var num3 = Math.ceil(4.5);
+
+        //na najblizi donji
+        var num4 = Math.floor(4.6);
+
+        console.log(num1);
+        console.log(num2);
+        console.log(num3);
+        console.log(num4);
+
+
+        var num5 = Math.random();
+        //document.getElementById("broj").innerHTML = Math.random();
+
+        //random od 0 do 10
+        //document.getElementById("broj").innerHTML = Math.floor(Math.random() * 11);
+
+        // 0-100
+        //document.getElementById("broj").innerHTML = Math.floor(Math.random()*101);
+
+        document.getElementById("broj").innerHTML = Math.ceil(Math.random() * 10);
+
+    </script>
+</body>
+
+</html>

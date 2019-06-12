@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="stringovijs.js"></script>
+</head>
+
+<body>
+    <form action="" name="forma">
+        <label for="prvi">prvi broj</label>
+        <input type="text" id="prvi">
+        <br>
+        <label for="drugi">drugi broj</label>
+        <input type="text" id="drugi">
+        <br>
+        <label for="rezultat">rezultat</label>
+        <input type="text" id="rezultat">
+        <input type="button" value="saberi" onclick="proizvod()">
+
+    </form>
+    <script>
+        //        function zbir() {
+        //            var num1 = document.getElementById("prvi").value;
+        //            var num2 = document.getElementById("drugi").value;
+        //            var rez1 = parseInt(num1) + parseInt(num2); //celi brojevi
+        //            var rez2 = parseFloat(num1) + parseFloat(num2); //decimalni br
+        //            console.log(num1);
+        //            console.log(num2);
+        //            console.log(rez1);
+        //            console.log(rez2);
+        //            //ispisivanje u input element
+        //            document.getElementById("rezultat").value = rez2;
+        //    }
+
+        function proizvod() {
+            var num1 = document.getElementById("prvi").value;
+            var num2 = document.getElementById("drugi").value;
+            var rez1 = parseInt(num1) * parseInt(num2); //celi brojevi
+            var rez2 = parseFloat(num1) * parseFloat(num2); //decimalni br
+            console.log(num1);
+            console.log(num2);
+            console.log(rez1);
+            console.log(rez2);
+            //ispisivanje u input element
+            document.getElementById("rezultat").value = rez2;
+            document.getElementById("prvi").value = "";
+            document.getElementById("drugi").value = "";
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <p></p>
+    <div id="mojId"></div>
+    <script>
+        $(document).ready(function() {
+            // alert("DOM je ucitan!");
+            //
+            $("#mojId").html("Ovo ispisuje jQuery.");
+        });
+
+
+        //selektovanje prema tagu
+        $(document).ready(function() {
+            //brojanje p elemenata
+            var paragraf = $('p');
+            console.log("ima dudf " + paragraf.length);
+
+            //izbroj sve div tagove
+            //dodati crvenu boju teksta svim tim elementima
+
+        });
+
+    </script>
+</body>
+
+</html>

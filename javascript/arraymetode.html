@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="auto"></p>
+
+    <script>
+        var automobili = ["Audi", "BMW", "Opel"];
+        //dodavanje novih elemenata
+        automobili.push("Volvo"); //dodaje na kraj
+        automobili.unshift("Jugo"); //dodaje na pocetak
+        console.log(automobili);
+
+        //brisanje
+        automobili.pop(); //brise poslednji
+        automobili.shift(); //brise prvi
+
+        //menjanje odredjenog elementa
+        automobili[1] = "Mercedes";
+
+        //dodavanje jednog ili vise elemenata u niz
+        automobili.splice(2, 0, "Renault");
+
+        //brisanje jednog ili vise
+        //automobili.splice(0, 1);
+        automobili.splice(0, 2);
+
+
+        //konkatenacija nizova
+        var niz1 = [1, 2, 3];
+        var niz2 = [4, 5, 6];
+        var spojeniNizovi = niz1.concat(niz2);
+        console.log(spojeniNizovi);
+
+        //konvertovanje niza u string
+        document.getElementById("auto").innerHTML = automobili.join("_");
+
+
+        //pretvaranje stringa u niz (splitovanje)
+        var string = "kako nam danas ide programiranje";
+        var niz = string.split(" ");
+        console.log(niz);
+
+    </script>
+</body>
+
+</html>

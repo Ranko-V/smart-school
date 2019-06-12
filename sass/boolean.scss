@@ -1,0 +1,13 @@
+$fontSize: 42px;
+
+
+.bool {
+    @if ($fontSize>20 and $fontSize<25) {
+        color: red;
+    }
+
+    @else if ($fontSize>35) {
+        color: green;
+    }
+
+}
